@@ -3,6 +3,7 @@ import { useQuery } from "@apollo/client";
 import { type Country, GET_COUNTRIES } from "@/graphql/queries/getCountries";
 import AppPie from "@/components/charts/AppPie";
 import AppLine from "@/components/charts/AppLine";
+import AppBar from "@/components/charts/AppBar";
 
 export default function Home() {
   const { data, loading, error } = useQuery(GET_COUNTRIES);
@@ -112,6 +113,24 @@ export default function Home() {
         <AppLine
           title="Top 10 Common Currencies Per Countries"
           lineName="Currencies"
+          tooltipDesc="countries"
+          chartData={currencyChartData}
+        />
+      </section>
+      {/* =============================================== */}
+      <section className="flex flex-wrap justify-center">
+        <AppBar
+          title="Countries per Continent"
+          tooltipDesc="countries"
+          chartData={countriesChartData}
+        />
+        <AppBar
+          title="Languages per Continent"
+          tooltipDesc="languages"
+          chartData={languagesChartData}
+        />
+        <AppBar
+          title="Top 10 Common Currencies Per Countries"
           tooltipDesc="countries"
           chartData={currencyChartData}
         />
