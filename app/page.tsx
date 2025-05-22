@@ -121,16 +121,19 @@ export default function Home() {
       <section className="flex flex-wrap justify-center">
         <AppBar
           title="Countries per Continent"
+          lineName="Continents"
           tooltipDesc="countries"
           chartData={countriesChartData}
         />
         <AppBar
           title="Languages per Continent"
+          lineName="Continents"
           tooltipDesc="languages"
           chartData={languagesChartData}
         />
         <AppBar
           title="Top 10 Common Currencies Per Countries"
+          lineName="Currencies"
           tooltipDesc="countries"
           chartData={currencyChartData}
         />

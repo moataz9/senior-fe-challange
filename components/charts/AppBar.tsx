@@ -13,10 +13,12 @@ import {
 
 export default function AppBar({
   title,
+  lineName,
   tooltipDesc,
   chartData,
 }: {
   title: string;
+  lineName: string;
   tooltipDesc: string;
   chartData: { name: string; value: number }[];
 }) {
@@ -46,7 +48,7 @@ export default function AppBar({
           <Legend />
           <Bar
             dataKey="value"
-            name="Unique Languages"
+            name={lineName}
             fill="var(--color-teal-600)"
           />
         </BarChart>
