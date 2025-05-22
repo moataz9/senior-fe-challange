@@ -1,7 +1,4 @@
 "use client";
-
-import { useQuery } from "@apollo/client";
-import { type Country, GET_COUNTRIES } from "@/graphql/queries/getCountries";
 import {
   ResponsiveContainer,
   LineChart,

@@ -1,26 +1,7 @@
 "use client";
 
-import { useQuery } from "@apollo/client";
-import { GET_COUNTRIES, type Country } from "@/graphql/queries/getCountries";
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
-
-const TEAL_COLORS = [
-  "#008080",
-  "#009688",
-  "#00796B",
-  "#1DE9B6",
-  "#00BFA5",
-  "#4DB6AC",
-  "#26A69A",
-  "#00695C",
-  "#00ACC1",
-  "#80CBC4",
-  "#B2DFDB",
-  "#64FFDA",
-  "#18FFFF",
-  "#004D40",
-  "#A7FFEB",
-];
+import { TEAL_COLORS } from "@/contants/colors";
 
 export default function AppPie({
   title,
