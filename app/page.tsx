@@ -2,6 +2,7 @@
 import { useQuery } from "@apollo/client";
 import { type Country, GET_COUNTRIES } from "@/graphql/queries/getCountries";
 import AppPie from "@/components/charts/AppPie";
+import AppLine from "@/components/charts/AppLine";
 
 export default function Home() {
   const { data, loading, error } = useQuery(GET_COUNTRIES);
@@ -67,7 +68,6 @@ export default function Home() {
     },
     {}
   );
-
   const currencyChartData = Object.entries(currencyCounts)
     .sort((a, b) => b[1] - a[1])
     .slice(0, 10)
@@ -78,7 +78,7 @@ export default function Home() {
       <h1 className="text-3xl font-bold text-center text-teal-600 mt-4">
         Senior FE Challenge
       </h1>
-      <div className="flex flex-wrap justify-center">
+      <section className="flex flex-wrap justify-center">
         <AppPie
           title="Countries per Continent"
           tooltipDesc="countries"
@@ -94,7 +94,28 @@ export default function Home() {
           tooltipDesc="countries"
           chartData={currencyChartData}
         />
-      </div>
+      </section>
+      {/* =============================================== */}
+      <section className="flex flex-wrap justify-center">
+        <AppLine
+          title="Countries per Continent"
+          lineName="Continents"
+          tooltipDesc="countries"
+          chartData={countriesChartData}
+        />
+        <AppLine
+          title="Languages per Continent"
+          lineName="Continents"
+          tooltipDesc="languages"
+          chartData={languagesChartData}
+        />
+        <AppLine
+          title="Top 10 Common Currencies Per Countries"
+          lineName="Currencies"
+          tooltipDesc="countries"
+          chartData={currencyChartData}
+        />
+      </section>
     </div>
   );
 }
