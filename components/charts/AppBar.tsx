@@ -27,7 +27,7 @@ export default function AppBar({
       </h2>
 
       <ResponsiveContainer width="100%" height={400}>
-        <BarChart data={chartData} className="[&>svg>path]:fill-teal-400">
+        <BarChart data={chartData} className="[&>svg>path]:fill-teal-400 [&>svg>path]:duration-100">
           <CartesianGrid strokeDasharray="3 3" stroke="var(--color-teal-200)" />
           <XAxis dataKey="name" stroke="var(--color-teal-400)" />
           <YAxis dataKey="value" stroke="var(--color-teal-400)" />
