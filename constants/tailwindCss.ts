@@ -1,0 +1,1 @@
+export const toolTipTheme = 'bg-teal-50 dark:bg-teal-900 text-teal-950 dark:text-teal-300 p-2 border rounded shadow';

@@ -1,7 +1,8 @@
 "use client";
 
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
-import { TEAL_COLORS } from "@/contants/colors";
+import { TEAL_COLORS } from "@/constants/colors";
+import { toolTipTheme } from "@/constants/tailwindCss";
 
 export default function AppPie({
   title,
@@ -37,7 +38,7 @@ export default function AppPie({
             content={({ active, payload }) => {
               if (active && payload && payload.length) {
                 return (
-                  <div className="bg-teal-50 p-2 border rounded shadow">
+                  <div className={toolTipTheme}>
                     <p>{`${payload[0].name}: ${payload[0].value} ${tooltipDesc}`}</p>
                   </div>
                 );

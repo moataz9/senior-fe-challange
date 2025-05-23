@@ -1,4 +1,5 @@
 "use client";
+import { toolTipTheme } from "@/constants/tailwindCss";
 import {
   ResponsiveContainer,
   LineChart,
@@ -35,7 +36,7 @@ export default function AppLine({
             content={({ active, payload }) => {
               if (active && payload && payload.length) {
                 return (
-                  <div className="bg-teal-50 p-2 border rounded shadow">
+                  <div className={toolTipTheme}>
                     <p>{`${payload[0].name}: ${payload[0].value} ${tooltipDesc}`}</p>
                   </div>
                 );
