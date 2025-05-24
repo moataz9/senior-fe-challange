@@ -184,7 +184,7 @@ Feel free to customize any section to better match your project’s conventions.
 
 This is a [Next.js](https://nextjs.org) application that visualizes country, language, and currency data using interactive charts. It uses GraphQL to fetch data from [countries.trevorblades.com](https://countries.trevorblades.com/).
 
-## Features
+## App Features
 
 - Interactive Pie, Bar, and Line charts
 - Filtering, sorting, and pagination controls

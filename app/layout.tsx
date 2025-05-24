@@ -44,7 +44,7 @@ export default async function RootLayout({
         <ReduxProvider preloadedState={preloadedState}>
           <nav className="flex items-center justify-between px-4">
             <SideBar />
-            <h1 className="text-3xl font-bold text-teal-600 mt-4">
+            <h1 className="text-2xl md:text-3xl font-bold text-teal-500">
               Senior FE Challenge
             </h1>
             <ThemeToggler />

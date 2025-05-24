@@ -58,8 +58,8 @@ export default function AppBar({
   );
 
   return (
-    <div className="p-8 flex flex-col items-center min-w-[1000px]">
-      <h2 className="text-2xl text-center font-bold mb-4 text-teal-600">
+    <div className="p-8 flex flex-col items-center min-w-screen md:min-w-[1000px]">
+      <h2 className="text-2xl text-center font-bold mb-4 text-teal-500">
         {title}
       </h2>
       {/* Controls */}
@@ -121,7 +121,7 @@ export default function AppBar({
         </BarChart>
       </ResponsiveContainer>
       {/* Pagination */}
-      <div className="mt-2 flex gap-2 items-center text-teal-900 dark:text-teal-100">
+      <div className="mt-2 flex flex-wrap gap-2 items-center justify-center text-teal-900 dark:text-teal-100">
         <button
           onClick={() => setPage((p) => Math.max(1, p - 1))}
           disabled={page === 1}
