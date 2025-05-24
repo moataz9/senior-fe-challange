@@ -8,4 +8,5 @@ const httpsLink = new HttpLink({
 export const client = new ApolloClient({
   link: httpsLink,
   cache: new InMemoryCache(),
+  ssrMode: typeof window === "undefined",
 });
