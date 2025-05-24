@@ -10,7 +10,7 @@ export default function SideBar() {
       <button
         className="m-4 p-1 h-8 w-9 cursor-pointer border-2 rounded border-teal-500 bg-teal-50 dark:bg-teal-900 dark:border-teal-600"
         onClick={() => setShowSideBar(true)}
-        aria-label="Toggle sidebar"
+        aria-label="Open Sidebar"
         aria-expanded={showSideBar}
       >
         <svg
@@ -30,7 +30,7 @@ export default function SideBar() {
         className={`fixed inset-0 w-screen h-screen origin-top-left transition-transform duration-300 ease-in-out z-50 ${
           showSideBar ? "scale-100" : "scale-0"
         }`}
-        aria-label="Sidebar"
+        aria-label="Close Sidebar Overlay"
         aria-hidden={!showSideBar}
         onClick={() => setShowSideBar(false)}
         role="button"
@@ -42,7 +42,7 @@ export default function SideBar() {
         }`}
         aria-label="Sidebar"
         aria-hidden={!showSideBar}
-        role="slider"
+        role="navigation"
       >
         <div className="flex items-center justify-between">
           <ThemeToggler />
@@ -50,7 +50,8 @@ export default function SideBar() {
             className="text-teal-500 text-5xl cursor-pointer block mx-1"
             onClick={() => setShowSideBar(false)}
             aria-hidden={!showSideBar}
-            aria-label="Close sidebar"
+            aria-label="Close Sidebar Button"
+            role="button"
           >
             &times;
           </button>
