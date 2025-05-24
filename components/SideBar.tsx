@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 
 export default function SideBar() {
-  const [showSideBar, setShowSideBar] = useState(true);
+  const [showSideBar, setShowSideBar] = useState(false);
   return (
     <>
       <button
