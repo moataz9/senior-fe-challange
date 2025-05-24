@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import ThemeToggler from "./ThemeToggler";
+import Link from "next/link";
 
 export default function SideBar() {
   const [showSideBar, setShowSideBar] = useState(false);
@@ -53,6 +54,32 @@ export default function SideBar() {
           >
             &times;
           </button>
+        </div>
+        <div className="mt-8 flex flex-col gap-4">
+          <Link
+            href="/"
+            className="text-xl font-bold text-teal-600 capitalize px-3 border-l-2 border-teal-600 underline underline-offset-4"
+          >
+            Home
+          </Link>
+          <Link
+            href="/line-charts"
+            className="text-xl font-bold text-teal-600 capitalize px-3 border-l-2 border-teal-600 underline underline-offset-4"
+          >
+            line charts
+          </Link>
+          <Link
+            href="/bar-charts"
+            className="text-xl font-bold text-teal-600 capitalize px-3 border-l-2 border-teal-600 underline underline-offset-4"
+          >
+            bar charts
+          </Link>
+          <Link
+            href="/pie-charts"
+            className="text-xl font-bold text-teal-600 capitalize px-3 border-l-2 border-teal-600 underline underline-offset-4"
+          >
+            pie charts
+          </Link>
         </div>
       </aside>
     </>
